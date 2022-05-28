@@ -1,25 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
+import MyComponent from './components/MyComponent';
+import CounterComponent from './components/CounterComponent';
+import { Component } from 'react';
+import ClockComponent from './components/ClockComponent';
+import { DefaultPropsComponent, DemoComponentClass, DemoComponentFunction, Parent } from './components/GGPropsComponents';
+import { GGClock } from './components/GGStateComponents';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.onClickBtn = this.onClickBtn.bind(this);
+  }
+
+  onClickBtn() {
+    console.log('Button has been clicked!');
+  }
+
+  render() {
+    return (
+      <div>
+        <MyComponent title="Reactttt" onButtonClicked={this.onClickBtn} />
+        <CounterComponent />
+        <ClockComponent />
+        <DemoComponentClass user="luuu-xu" />
+        <DemoComponentFunction user="luuu-xu"/>
+        <Parent />
+        <DefaultPropsComponent />
+        <GGClock title="luuu-xu" />
+      </div>
+    );
+  }
 }
+
+// function App() {
+//   return (
+//     <div>
+//       <MyComponent title="Hello World"/>
+//     </div>
+//   );
+// }
 
 export default App;
