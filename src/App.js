@@ -5,6 +5,7 @@ import { Component } from 'react';
 import ClockComponent from './components/ClockComponent';
 import { DefaultPropsComponent, DemoComponentClass, DemoComponentFunction, Parent } from './components/GGPropsComponents';
 import { GGClock } from './components/GGStateComponents';
+import { HookState1, HookState2, HookState3, HookState4, HookState5 } from './components/GGuseStateHook';
 
 class App extends Component {
   constructor(props) {
@@ -28,6 +29,11 @@ class App extends Component {
         <Parent />
         <DefaultPropsComponent />
         <GGClock title="luuu-xu" />
+        <HookState1 />
+        <HookState2 />
+        <HookState3 />
+        <HookState4 />
+        <HookState5 />
       </div>
     );
   }
