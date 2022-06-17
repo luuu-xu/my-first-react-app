@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function HookState1() {
-  const click = useState('GeekforGeeks');
+  const [click, ] = useState('GeekforGeeks');
   return (
     <h1>Welcome to { click }</h1> 
   );
